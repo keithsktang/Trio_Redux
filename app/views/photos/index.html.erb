@@ -16,7 +16,7 @@
     <% @photos.each do |photo| %>
       <tr>
         <td><%= photo.title %></td>
-        <td><%= photo.url %></td>
+        <td><%= link_to (image_tag (photo.url)), photo, id: "show"%></td>
         <td><%= photo.caption %></td>
         <td><%= link_to 'Show', photo %></td>
         <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
@@ -29,3 +29,4 @@
 <br>
 
 <%= link_to 'New Photo', new_photo_path %>
+<%= render 'form' %>

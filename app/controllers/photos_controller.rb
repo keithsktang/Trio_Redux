@@ -5,6 +5,7 @@ class PhotosController < ApplicationController
   # GET /photos.json
   def index
     @photos = Photo.all
+    @photo = Photo.new
   end
 
   # GET /photos/1
@@ -16,6 +17,8 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
   end
+  #if this is just the path to new, why the new instance is needed?
+
 
   # GET /photos/1/edit
   def edit

@@ -7,13 +7,15 @@
 
 <p>
   <strong>Url:</strong>
-  <%= @photo.url %>
+  <%= image_tag @photo.url, size: "500" %>
 </p>
 
 <p>
   <strong>Caption:</strong>
   <%= @photo.caption %>
 </p>
+
+<%= render 'form' %>
 
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>
